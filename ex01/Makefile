@@ -1,6 +1,6 @@
 NAME			:= zombie
 CPPFLAGS		:= -Wall -Wextra -Werror -std=c++98
-SRCS			:= Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS			:= Zombie.cpp main.cpp zombieHorde.cpp
 BINDIR			:= bin/
 OBJS			:= $(addprefix $(BINDIR), $(SRCS:.cpp=.o))
 RM				:= rm -f

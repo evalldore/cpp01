@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 23:08:51 by niceguy           #+#    #+#             */
-/*   Updated: 2023/11/19 16:21:17 by niceguy          ###   ########.fr       */
+/*   Created: 2023/11/19 16:19:00 by niceguy           #+#    #+#             */
+/*   Updated: 2023/11/19 16:19:10 by niceguy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main(void)
+void	randomChump(std::string name)
 {
-	Zombie	*z_heap = (newZombie("Heap"));
-	delete z_heap;
-	randomChump("Stack");
+	Zombie	z(name);
+	z.Announce();
 }
