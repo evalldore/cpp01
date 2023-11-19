@@ -1,0 +1,4 @@
+**/bin
+**.vscode
+zombie
+.DS_Store
