@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:01:51 by evallee-          #+#    #+#             */
-/*   Updated: 2023/11/21 18:58:06 by evallee-         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:57:50 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include <iostream>
+#include "HumanB.hpp"
 
-HumanA::HumanA(void)
+HumanB::HumanB()
 {
-	std::cout << "Human A default constructor" << std::endl;
+	std::cout << "Human B default constructor" << std::endl;
+	this->_weapon = NULL;
 }
 
-HumanA::HumanA(const std::string name, Weapon& weapon)
+HumanB::HumanB(const std::string name)
 {
-	HumanA();
+	HumanB();
 	this->_name = name;
-	this->_weapon = &weapon;
 }
 
-void HumanA::attack() const
+void HumanB::attack() const
 {
-	std::cout << _name << "attacks with their " << _weapon->getType() << std::endl;
+	if (_weapon)
+		std::cout << _name << "attacks with their " << _weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon& weapon)
+{
+	_weapon = &weapon;
 }

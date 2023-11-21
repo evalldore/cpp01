@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 18:01:51 by evallee-          #+#    #+#             */
-/*   Updated: 2023/11/21 18:58:06 by evallee-         ###   ########.fr       */
+/*   Created: 2023/11/21 17:56:57 by evallee-          #+#    #+#             */
+/*   Updated: 2023/11/21 18:33:05 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-HumanA::HumanA(void)
+Weapon::Weapon()
 {
-	std::cout << "Human A default constructor" << std::endl;
+	std::cout << "Weapon default constructor" << std::endl;
 }
 
-HumanA::HumanA(const std::string name, Weapon& weapon)
+Weapon::Weapon(std::string type)
 {
-	HumanA();
-	this->_name = name;
-	this->_weapon = &weapon;
+	Weapon();
+	this->_type = type;
 }
 
-void HumanA::attack() const
-{
-	std::cout << _name << "attacks with their " << _weapon->getType() << std::endl;
-}
+const std::string Weapon::getType(void) const {return (this->_type);}
+void Weapon::setType(std::string type) {this->_type = type;}
