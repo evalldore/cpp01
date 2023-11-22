@@ -6,7 +6,7 @@
 /*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:01:51 by evallee-          #+#    #+#             */
-/*   Updated: 2023/11/21 18:57:50 by evallee-         ###   ########.fr       */
+/*   Updated: 2023/11/21 19:10:11 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ HumanB::HumanB(const std::string name)
 void HumanB::attack() const
 {
 	if (_weapon)
-		std::cout << _name << "attacks with their " << _weapon->getType() << std::endl;
+		std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon& weapon)
