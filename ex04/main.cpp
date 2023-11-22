@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:11:40 by evallee-          #+#    #+#             */
-/*   Updated: 2023/11/22 01:02:11 by niceguy          ###   ########.fr       */
+/*   Updated: 2023/11/22 15:08:55 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
+
+void replaceWord(std::string& str, const std::string& oldWord, const std::string& newWord) {
+	size_t pos = 0;
+	while ((pos = str.find(oldWord, pos)) != std::string::npos) {
+		str.erase(pos, oldWord.length());
+		str.insert(pos, newWord);
+		pos += newWord.length();
+	}
+}
 
 int main(int argc, char *argv[])
 {
@@ -34,8 +44,7 @@ int main(int argc, char *argv[])
 		while(true)
 		{
 			std::getline(target, line);
-			if (line == argv[2])
-				line = argv[3];
+			replaceWord(line, argv[2], argv[3]);
 			copy << line;
 			if (!target.eof())
 				copy << std::endl;
