@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:11:40 by evallee-          #+#    #+#             */
-/*   Updated: 2023/11/21 19:33:01 by evallee-         ###   ########.fr       */
+/*   Updated: 2023/11/22 01:02:11 by niceguy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,32 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argv;
 	if (argc < 4)
 		return 0;
 	std::string		path;
-	std::ofstream	target;
+	std::string		path_copy;
+	std::string		line;
+	std::ifstream	target;
 	std::ofstream	copy;
 
 	path = argv[1];
-	target.open(path);
+	target.open(path.c_str());
 	if (target.is_open())
 	{
-		copy.open(path + ".replace");
-		while(!target.eof())
+		path_copy = path + ".replace";
+		copy.open(path_copy.c_str());
+		if (!copy.is_open())
+			return 1;
+		while(true)
 		{
-			/*target
-			copy << getline*/
+			std::getline(target, line);
+			if (line == argv[2])
+				line = argv[3];
+			copy << line;
+			if (!target.eof())
+				copy << std::endl;
+			else
+				break;
 		}
 		copy.close();
 		target.close();
