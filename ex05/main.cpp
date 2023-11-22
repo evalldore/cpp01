@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 01:12:26 by niceguy           #+#    #+#             */
-/*   Updated: 2023/11/22 01:19:58 by niceguy          ###   ########.fr       */
+/*   Updated: 2023/11/22 16:11:26 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@ int	main(void)
 {
 	Harl	h;
 
-	
+	h.complain("DEBUG");
+	h.complain("INFOS");
+	h.complain("WARNING");
+	h.complain("ERROR");
 }

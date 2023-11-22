@@ -1,6 +1,6 @@
-NAME			:= sed
+NAME			:= harl
 CPPFLAGS		:= -Wall -Wextra -Werror -std=c++98
-SRCS			:= main.cpp Halr.cpp
+SRCS			:= main.cpp Harl.cpp
 BINDIR			:= bin/
 OBJS			:= $(addprefix $(BINDIR), $(SRCS:.cpp=.o))
 RM				:= rm -f
