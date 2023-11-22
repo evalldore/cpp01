@@ -1,4 +1,7 @@
 **/bin
 **.vscode
 zombie
+violence
+sed
 .DS_Store
+**test.txt
