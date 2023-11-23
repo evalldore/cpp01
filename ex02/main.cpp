@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:47:08 by niceguy           #+#    #+#             */
-/*   Updated: 2023/11/19 16:54:19 by niceguy          ###   ########.fr       */
+/*   Updated: 2023/11/23 16:54:38 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int main (void)
 	std::string&	stringREF = str;
 
 	std::cout << "string adress " << &str << std::endl;
-	std::cout << "adress help by pointer " << stringPTR << std::endl;
-	std::cout << "adress help by reference " << &stringREF << std::endl;
+	std::cout << "adress held by pointer " << stringPTR << std::endl;
+	std::cout << "adress held by reference " << &stringREF << std::endl;
 
 	std::cout << "string value " << str << std::endl;
 	std::cout << "pointer's value " << *stringPTR << std::endl;
