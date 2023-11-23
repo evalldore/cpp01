@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niceguy <niceguy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: evallee- <evallee-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 23:08:51 by niceguy           #+#    #+#             */
-/*   Updated: 2023/11/19 16:21:17 by niceguy          ###   ########.fr       */
+/*   Updated: 2023/11/23 16:51:04 by evallee-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(void)
 {
 	Zombie	*z_heap = (newZombie("Heap"));
+	z_heap->Announce();
 	delete z_heap;
 	randomChump("Stack");
 }
